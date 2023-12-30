@@ -24,7 +24,8 @@ export default class HelpCommand {
 		client: Client, 
 		{ localize }: InteractionData
 	) {
-		
+        await interaction.deferReply();
+        
 		const embed = await this.getEmbed({ client, interaction, locale: localize })
 
 		let components: any[] = []

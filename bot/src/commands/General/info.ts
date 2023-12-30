@@ -38,7 +38,7 @@ export default class InfoCommand {
 		client: Client,
 		{ localize }: InteractionData
 	) {
-		
+		await interaction.deferReply();
 		const embed = new EmbedBuilder()
 			.setAuthor({
 				name: interaction.user.username,

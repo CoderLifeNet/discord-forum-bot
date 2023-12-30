@@ -21,8 +21,8 @@ const envMikroORMConfig = {
         /**
          * SQLite
          */
-        type: 'better-sqlite', // or 'sqlite'
-        dbName: `${databaseConfig.path}db.sqlite`,
+        // type: 'better-sqlite', // or 'sqlite'
+        // dbName: `${databaseConfig.path}db.sqlite`,
 
         /**
          * MongoDB
@@ -36,7 +36,7 @@ const envMikroORMConfig = {
         // type: 'postgresql',
         // dbName: process.env['DATABASE_NAME'],
         // host: process.env['DATABASE_HOST'],
-        // port: Number(process.env['DATABASE_PORT']),,
+        // port: Number(process.env['DATABASE_PORT']),
         // user: process.env['DATABASE_USER'],
         // password: process.env['DATABASE_PASSWORD'],
 
@@ -53,12 +53,12 @@ const envMikroORMConfig = {
         /**
          * MariaDB
          */
-        // type: 'mariadb',
-        // dbName: process.env['DATABASE_NAME'],
-        // host: process.env['DATABASE_HOST'],
-        // port: Number(process.env['DATABASE_PORT']),
-        // user: process.env['DATABASE_USER'],
-        // password: process.env['DATABASE_PASSWORD'],
+        type: 'mariadb',
+        dbName: process.env['DATABASE_NAME'],
+        host: process.env['DATABASE_HOST'],
+        port: Number(process.env['DATABASE_PORT']),
+        user: process.env['DATABASE_USER'],
+        password: process.env['DATABASE_PASSWORD'],
 
         highlighter: new SqlHighlighter(),
         debug: false,
